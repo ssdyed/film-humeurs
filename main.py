@@ -7,9 +7,9 @@ humeurs = {
     "joyeux": ["comedy", "musical", "family"],
     "triste": ["drama", "romance"],
     "excité": ["action", "adventure"],
-    "curieux": ["documentary", "history"],
-    "énergique": ["action", "adventure", "sci-fi"],
-    "tendu": ["horror", "mystery", "thriller"] }
+    "curieux": ["documentary", "history", ",mystery", "horror"],
+    "énergique": ["action", "adventure", "sci-fi", "thriller"],
+    "tendu": ["comedy"] }
 
 print("Générateur de film selon l'humeur")
 print("Quelle est votre humeur actuelle ?")
@@ -36,13 +36,13 @@ elif choix_humeur == "excité":
     url = "https://www.imdb.com/search/title/?genres=action,adventure&title_type=movie"
 
 elif choix_humeur == "curieux":
-    url = "https://www.imdb.com/search/title/?genres=documentary,history&title_type=movie"
+    url = "https://www.imdb.com/search/title/?genres=documentary,history,mystery,horror&title_type=movie"
 
 elif choix_humeur == "énergique":
-    url = "https://www.imdb.com/search/title/?genres=sci-fi,action,adventure&title_type=movie"
+    url = "https://www.imdb.com/search/title/?genres=sci-fi,action,adventure,thriller&title_type=movie"
 
 elif choix_humeur == "tendu":
-    url = "https://www.imdb.com/search/title/?genres=horror,mystery,thriller&title_type=movie"
+    url = "https://www.imdb.com/search/title/?genres=comedy&title_type=movie"
 
 # on choisit un film au hasard dans le top 250 si l'humeur est neutre
 elif choix_humeur == "neutre":
